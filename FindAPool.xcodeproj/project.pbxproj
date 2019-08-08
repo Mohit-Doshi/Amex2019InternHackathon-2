@@ -13,6 +13,8 @@
 		2D9DF40822FBFFE90036EAE1 /* FindAPool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D9DF40622FBFFE90036EAE1 /* FindAPool.xcdatamodeld */; };
 		2D9DF40A22FBFFEC0036EAE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9DF40922FBFFEC0036EAE1 /* Assets.xcassets */; };
 		2D9DF40D22FBFFEC0036EAE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D9DF40B22FBFFEC0036EAE1 /* LaunchScreen.storyboard */; };
+		2D9DF41522FC0BF50036EAE1 /* FindPoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9DF41422FC0BF50036EAE1 /* FindPoolViewController.swift */; };
+		2D9DF41722FC21AE0036EAE1 /* CallsToMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9DF41622FC21AE0036EAE1 /* CallsToMaps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2D9DF40922FBFFEC0036EAE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D9DF40C22FBFFEC0036EAE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D9DF40E22FBFFEC0036EAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D9DF41422FC0BF50036EAE1 /* FindPoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPoolViewController.swift; sourceTree = "<group>"; };
+		2D9DF41622FC21AE0036EAE1 /* CallsToMaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsToMaps.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				2D9DF3FF22FBFFE90036EAE1 /* AppDelegate.swift */,
+				2D9DF41622FC21AE0036EAE1 /* CallsToMaps.swift */,
 				2D9DF40122FBFFE90036EAE1 /* ViewController.swift */,
+				2D9DF41422FC0BF50036EAE1 /* FindPoolViewController.swift */,
 				2D9DF40322FBFFE90036EAE1 /* Main.storyboard */,
 				2D9DF40922FBFFEC0036EAE1 /* Assets.xcassets */,
 				2D9DF40B22FBFFEC0036EAE1 /* LaunchScreen.storyboard */,
@@ -139,8 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D9DF40822FBFFE90036EAE1 /* FindAPool.xcdatamodeld in Sources */,
+				2D9DF41522FC0BF50036EAE1 /* FindPoolViewController.swift in Sources */,
 				2D9DF40222FBFFE90036EAE1 /* ViewController.swift in Sources */,
 				2D9DF40022FBFFE90036EAE1 /* AppDelegate.swift in Sources */,
+				2D9DF41722FC21AE0036EAE1 /* CallsToMaps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WHRKUX9Y9L;
 				INFOPLIST_FILE = FindAPool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +305,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "arr-forty-two.FindAPool";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -307,6 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WHRKUX9Y9L;
 				INFOPLIST_FILE = FindAPool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +324,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "arr-forty-two.FindAPool";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

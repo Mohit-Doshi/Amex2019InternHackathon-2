@@ -10,11 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var LogoImageView: UIImageView!
+    
+    @IBOutlet weak var NameField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("In Segue\n")
+            // pass data to next view
+        let obj = segue.destination as!FindPoolViewController
+            obj.sentName = NameField.text!
 
+    }
 
 }
 
