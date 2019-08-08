@@ -13,6 +13,8 @@ class FindPoolViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     let choices = ["AEDR","TRC-N/TRC-W","Tempe","AESC"]
     var choice:String = "default"
+    var obj:CallsToMaps?
+    var routes:[CurrentRoutes]?
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -42,6 +44,7 @@ class FindPoolViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         // Do any additional setup after loading the view.
         pickerView.delegate = self
         pickerView.dataSource = self
+        obj = CallsToMaps() // constructor
     }
     
     func retcoordinates(cityaddr: String, completionHandler: @escaping (CLLocationCoordinate2D) -> Void)
@@ -67,19 +70,26 @@ class FindPoolViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
 
     @IBAction func GenerateRoutes(_ sender: UIButton) {
-        var address:String = AddressField.text!
-        var dtime = TimeField.text!
-        var dest = choice
         
-    }
-    /*
+        print("\n\n\n\nThis is the json:  \(obj?.jsonResult)\n\n\n\n")
+        
+        retcoordinates(cityaddr: AddressField.text!){ (cdnates) in
+            self.routes = self.obj?.themcalls(address: cdnates, ti: Float(self.TimeField.text!) as! Float, de: self.choice)
+        }
+        print("\n\n\n\nImmediately: ")
+                }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        print(routes![0].name)
+      //  let obj = segue.destination as!
+      //  obj.sentName = NameField.text!
+        
     }
-    */
+    
 
 }
