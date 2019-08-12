@@ -46,7 +46,7 @@ class CallsToMaps {
         for driver in drivers {
             let defaultSession = URLSession(configuration: URLSessionConfiguration.default)
             var dataTask: URLSessionDataTask?
-            var serveurl = url + "\(driver.lato),\(driver.lono)&destinations=\(driver.latd)%2C\(driver.lond)&key=AIzaSyDPD2Xwja7Ney14Pwuq8DQU4A-Fa5Y9rro"
+            var serveurl = url + "\(driver.lato),\(driver.lono)&destinations=\(driver.latd)%2C\(driver.lond)&key="
             let session = URLSession.shared
             let googurl = URL(string: serveurl)!
             dataTask = defaultSession.dataTask(with: googurl) {

@@ -85,9 +85,9 @@ class FindPoolViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        print(routes![0].name)
-      //  let obj = segue.destination as!
-      //  obj.sentName = NameField.text!
+
+          let obj = segue.destination as! CarpoolsViewController
+        obj.sentClass = routes!
         
     }
     
